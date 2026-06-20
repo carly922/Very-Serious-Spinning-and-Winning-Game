@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bicdpf2ye5x8l"]
+
+[ext_resource type="Script" uid="uid://dwwsdv8wp3ri5" path="res://ui_menu.gd" id="1_gww7l"]
+[ext_resource type="Texture2D" uid="uid://bpb1w6tkoi43v" path="res://bad logo lol.png" id="2_gcaxk"]
+[ext_resource type="Texture2D" uid="uid://cjrp6o653ep6q" path="res://badplaybutton.png" id="3_dq8c1"]
+
+[node name="Menu" type="Node2D" unique_id=581965619]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1628144200]
+position = Vector2(575, 189.00002)
+scale = Vector2(0.54360324, 0.50988585)
+texture = ExtResource("2_gcaxk")
+
+[node name="Control" type="Control" parent="." unique_id=318275398]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="playButton" type="Button" parent="Control" unique_id=1688519899]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 347.0
+offset_right = 749.0
+offset_bottom = 416.0
+text = "Play"
+script = ExtResource("1_gww7l")
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/playButton" unique_id=2088219677]
+position = Vector2(164, 49.999992)
+scale = Vector2(0.9319999, 0.8474999)
+texture = ExtResource("3_dq8c1")
+
+[node name="settingsButton" type="Button" parent="Control" unique_id=1342088338]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 502.0
+offset_right = 749.0
+offset_bottom = 573.0
+text = "Settings"
+script = ExtResource("1_gww7l")
+
+[node name="Panel" type="Panel" parent="Control" unique_id=1454295961]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 71.0
+offset_top = 109.0
+offset_right = 1092.0
+offset_bottom = 601.0
+
+[node name="closeButton" type="Button" parent="Control/Panel" unique_id=1394726423]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 991.0
+offset_right = 1020.0
+offset_bottom = 31.0
+text = "X"
+script = ExtResource("1_gww7l")
+
+[connection signal="pressed" from="Control/playButton" to="Control/playButton" method="_on_pressed"]
+[connection signal="pressed" from="Control/settingsButton" to="Control/settingsButton" method="_on_pressed_settings"]
+[connection signal="pressed" from="Control/Panel/closeButton" to="Control/playButton" method="_on_close_button_pressed"]
