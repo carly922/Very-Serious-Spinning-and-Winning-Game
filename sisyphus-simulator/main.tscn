@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cnr40qk0271te"]
 
+[ext_resource type="Script" uid="uid://bei7h0ue6w5pk" path="res://ui_shop.gd" id="1_ig7tw"]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_7dm0k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
@@ -16,9 +18,18 @@ grow_vertical = 2
 
 [node name="Background" type="ColorRect" parent="Control" unique_id=988207632]
 layout_mode = 0
-offset_right = 1153.0
-offset_bottom = 649.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1154.0
+offset_bottom = 650.0
 color = Color(0.52127814, 0.43777165, 0.3499301, 1)
+
+[node name="Button" type="Button" parent="Control" unique_id=201690709]
+layout_mode = 0
+offset_right = 141.0
+offset_bottom = 31.0
+text = "Shop (for testing)"
+script = ExtResource("1_ig7tw")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Control" unique_id=1168183212]
 position = Vector2(257, 349)
