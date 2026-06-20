@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://bvk6526lhbop2"]
 
 [ext_resource type="Script" uid="uid://bcxy84430tcwo" path="res://ui_wheel.gd" id="1_opy6k"]
-[ext_resource type="Texture2D" uid="uid://dte05waqus84d" path="res://test rock.png" id="2_xfkap"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_opy6k"]
-radius = 109.3
+[sub_resource type="CanvasTexture" id="CanvasTexture_0gs0y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_opy6k"]
+size = Vector2(117, 115)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xfkap"]
 
@@ -32,13 +33,14 @@ position = Vector2(561, 311)
 script = ExtResource("1_opy6k")
 
 [node name="sprite" type="Sprite2D" parent="CenterContainer/CanvasLayer/Area2D" unique_id=1626458516]
-texture = ExtResource("2_xfkap")
+scale = Vector2(115, 115)
+texture = SubResource("CanvasTexture_0gs0y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CenterContainer/CanvasLayer/Area2D" unique_id=1697826972]
 light_mask = 512
 visibility_layer = 512
-position = Vector2(2, 0)
-shape = SubResource("CircleShape2D_opy6k")
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_opy6k")
 
 [node name="CenterScreen" type="StaticBody2D" parent="CenterContainer" unique_id=797385592]
 position = Vector2(562, 316)
