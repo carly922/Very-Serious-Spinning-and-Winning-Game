@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bvk6526lhbop2"]
+
+[ext_resource type="Script" uid="uid://bcxy84430tcwo" path="res://ui_wheel.gd" id="1_opy6k"]
+[ext_resource type="Texture2D" uid="uid://dte05waqus84d" path="res://test rock.png" id="2_xfkap"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnf4g"]
+size = Vector2(224, 217)
+
+[node name="UIwheel" type="Area2D" unique_id=1026993081]
+position = Vector2(1024, 520)
+script = ExtResource("1_opy6k")
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=1538005052]
+texture = ExtResource("2_xfkap")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=299357069]
+light_mask = 512
+visibility_layer = 512
+position = Vector2(2, 0)
+shape = SubResource("RectangleShape2D_qnf4g")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

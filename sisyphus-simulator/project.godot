@@ -18,6 +18,10 @@ config/icon="res://icon.svg"
 
 project/assembly_name="Sisyphus Simulator"
 
+[editor]
+
+movie_writer/movie_file="C:/Users/pocke/Documents/Very-Serious-Spinning-and-Winning-Game/sisyphus-simulator/test.avi"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
