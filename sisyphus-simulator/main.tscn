@@ -2,6 +2,8 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7dm0k"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
+
 [node name="Node2D" type="Node2D" unique_id=1159432967]
 
 [node name="Control" type="Control" parent="." unique_id=229787975]
@@ -12,11 +14,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control" unique_id=174867755]
-sprite_frames = SubResource("SpriteFrames_7dm0k")
-
 [node name="Background" type="ColorRect" parent="Control" unique_id=988207632]
 layout_mode = 0
 offset_right = 1153.0
 offset_bottom = 649.0
 color = Color(0.52127814, 0.43777165, 0.3499301, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Control" unique_id=1168183212]
+position = Vector2(257, 349)
+floor_stop_on_slope = false
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/CharacterBody2D" unique_id=174867755]
+sprite_frames = SubResource("SpriteFrames_7dm0k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Control/CharacterBody2D" unique_id=2086502492]
+shape = SubResource("RectangleShape2D_7dm0k")
