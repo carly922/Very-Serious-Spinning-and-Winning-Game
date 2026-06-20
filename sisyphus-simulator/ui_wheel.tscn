@@ -6,20 +6,42 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_opy6k"]
 radius = 109.3
 
-[node name="Node2D" type="Node2D" unique_id=626590889]
+[sub_resource type="CircleShape2D" id="CircleShape2D_xfkap"]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=755409083]
+[node name="Control" type="Control" unique_id=1090195322]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=984515149]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CenterContainer" unique_id=755409083]
 follow_viewport_enabled = true
 
-[node name="Area2D" type="Area2D" parent="CanvasLayer" unique_id=731012686]
+[node name="Area2D" type="Area2D" parent="CenterContainer/CanvasLayer" unique_id=731012686]
 position = Vector2(561, 311)
 script = ExtResource("1_opy6k")
 
-[node name="sprite" type="Sprite2D" parent="CanvasLayer/Area2D" unique_id=1626458516]
+[node name="sprite" type="Sprite2D" parent="CenterContainer/CanvasLayer/Area2D" unique_id=1626458516]
 texture = ExtResource("2_xfkap")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Area2D" unique_id=1697826972]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CenterContainer/CanvasLayer/Area2D" unique_id=1697826972]
 light_mask = 512
 visibility_layer = 512
 position = Vector2(2, 0)
 shape = SubResource("CircleShape2D_opy6k")
+
+[node name="CenterScreen" type="StaticBody2D" parent="CenterContainer" unique_id=797385592]
+position = Vector2(562, 316)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CenterContainer/CenterScreen" unique_id=1698714852]
+shape = SubResource("CircleShape2D_xfkap")

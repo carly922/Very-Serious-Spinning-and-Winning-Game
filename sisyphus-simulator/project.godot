@@ -15,6 +15,10 @@ run/main_scene="uid://bvk6526lhbop2"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/vsync/vsync_mode=0
+
 [dotnet]
 
 project/assembly_name="Sisyphus Simulator"
