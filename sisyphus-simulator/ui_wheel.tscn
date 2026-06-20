@@ -1,12 +1,25 @@
 [gd_scene format=3 uid="uid://bvk6526lhbop2"]
 
 [ext_resource type="Script" uid="uid://bcxy84430tcwo" path="res://ui_wheel.gd" id="1_opy6k"]
+[ext_resource type="Script" uid="uid://bei7h0ue6w5pk" path="res://ui_shop.gd" id="1_xfkap"]
 [ext_resource type="Texture2D" uid="uid://dte05waqus84d" path="res://test rock.png" id="2_xfkap"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_opy6k"]
 radius = 109.3
 
 [node name="Node2D" type="Node2D" unique_id=626590889]
+
+[node name="Control" type="Control" parent="." unique_id=1143246065]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_xfkap")
+
+[node name="PanelContainer" type="PanelContainer" parent="Control" unique_id=369126058]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=755409083]
 follow_viewport_enabled = true
