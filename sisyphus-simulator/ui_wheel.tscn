@@ -3,21 +3,23 @@
 [ext_resource type="Script" uid="uid://bcxy84430tcwo" path="res://ui_wheel.gd" id="1_opy6k"]
 [ext_resource type="Texture2D" uid="uid://dte05waqus84d" path="res://test rock.png" id="2_xfkap"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnf4g"]
-size = Vector2(224, 217)
+[sub_resource type="CircleShape2D" id="CircleShape2D_opy6k"]
+radius = 109.3
 
-[node name="UIwheel" type="Area2D" unique_id=1026993081]
-position = Vector2(1024, 520)
+[node name="Node2D" type="Node2D" unique_id=626590889]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=755409083]
+follow_viewport_enabled = true
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer" unique_id=731012686]
+position = Vector2(561, 311)
 script = ExtResource("1_opy6k")
 
-[node name="sprite" type="Sprite2D" parent="." unique_id=1538005052]
+[node name="sprite" type="Sprite2D" parent="CanvasLayer/Area2D" unique_id=1626458516]
 texture = ExtResource("2_xfkap")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=299357069]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Area2D" unique_id=1697826972]
 light_mask = 512
 visibility_layer = 512
 position = Vector2(2, 0)
-shape = SubResource("RectangleShape2D_qnf4g")
-
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+shape = SubResource("CircleShape2D_opy6k")
