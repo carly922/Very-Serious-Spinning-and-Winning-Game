@@ -1,5 +1,24 @@
 [gd_scene format=3 uid="uid://cnr40qk0271te"]
 
+[ext_resource type="Texture2D" uid="uid://1b3asujy1wnx" path="res://Sprite-0004-sheet.png" id="1_ig7tw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
+texture = ExtResource("1_ig7tw")
+texture_region_size = Vector2i(32, 16)
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+1:0/0 = 0
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_h2yge"]
+tile_shape = 1
+tile_size = Vector2i(32, 16)
+sources/1 = SubResource("TileSetAtlasSource_0xm2m")
+
 [node name="Control" type="Control" unique_id=1624682435]
 layout_mode = 3
 anchors_preset = 15
@@ -16,3 +35,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.4999473, 0.35376924, 0.1806908, 1)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=342573296]
+tile_set = SubResource("TileSet_h2yge")
