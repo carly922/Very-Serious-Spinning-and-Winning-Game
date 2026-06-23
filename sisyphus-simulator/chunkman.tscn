@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dcd6tw7icviab" path="res://chunk_manager.gd" id="1_j748c"]
 [ext_resource type="PackedScene" uid="uid://65j2f4l4xvrn" path="res://chunk_1.tscn" id="2_tryrb"]
+[ext_resource type="PackedScene" uid="uid://cqrxswjnun8r1" path="res://chunk_1_testing_dupe.tscn" id="3_n2bnx"]
 
 [node name="chunkman" type="Node2D" unique_id=748596482]
 script = ExtResource("1_j748c")
 chunk1 = ExtResource("2_tryrb")
+chunk1_2 = ExtResource("3_n2bnx")
