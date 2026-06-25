@@ -3,15 +3,19 @@
 [ext_resource type="Texture2D" uid="uid://bhe0p4mxp1gjo" path="res://Sprite-0002.png" id="1_g1h3x"]
 [ext_resource type="Script" uid="uid://cwwp81r4s4a54" path="res://player.gd" id="1_ravae"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ndl4y"]
-height = 34.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ravae"]
+size = Vector2(88, 153)
 
 [node name="sisyphus" type="CharacterBody2D" unique_id=158033104]
 script = ExtResource("1_ravae")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1625063775]
 texture_filter = 1
+position = Vector2(43.000004, 76.00001)
+scale = Vector2(5, 4.664)
 texture = ExtResource("1_g1h3x")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2097605913]
-shape = SubResource("CapsuleShape2D_ndl4y")
+position = Vector2(43, 75.5)
+shape = SubResource("RectangleShape2D_ravae")

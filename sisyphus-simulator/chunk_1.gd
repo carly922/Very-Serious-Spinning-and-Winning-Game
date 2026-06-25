@@ -8,5 +8,6 @@ func _on_screen_notifier_screen_exited() -> void:
 	queue_free()
 
 func _physics_process(delta: float) -> void:
+	#moves toward top right
 	position.x -= -400 * delta
-	position.y -= -200 * delta
+	position.y -= 200 * delta

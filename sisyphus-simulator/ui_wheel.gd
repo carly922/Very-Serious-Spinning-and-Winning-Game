@@ -1,4 +1,5 @@
 extends Area2D
+
 @onready var sprite = $sprite
 
 var mouse_hover = false
